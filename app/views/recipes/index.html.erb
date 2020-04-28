@@ -1,0 +1,13 @@
+<div style="padding: 80px;">
+  <h1>MarleySpoon Recipes</h1>
+  <table class="table table-responsive">
+    <tbody>
+    <% @recipes.each do |recipe| %>
+      <tr>
+        <td><h3><%= link_to recipe.title, recipe_path(recipe.id) %></h3></td>
+        <td><img src="https://<%= recipe.photo.url %>" width="400"></td>
+      </tr>
+    <% end %>
+    </tbody>
+  </table>
+</div>

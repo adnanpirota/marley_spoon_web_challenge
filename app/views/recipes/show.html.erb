@@ -1,0 +1,22 @@
+<div style="padding: 80px;">
+  <div class="row">
+    <div class="col-md-12">
+      <%= link_to 'All recipes', recipes_path,  class: 'float-right all-recipes-link' %>
+    </div>
+  </div>
+
+  <div class="col-md-12">
+    <%= @recipe.title %>
+    <%= @recipe.chef %>
+    <%= @recipe.description %>
+    <div class="tags-and-calories">
+      <%= @recipe.tags  %>
+      <%= @recipe.calories %>
+    </div>
+    <div >
+      <img src="<%= @recipe.photo_url %>">
+    </div>
+  </div>
+
+</div>
+
